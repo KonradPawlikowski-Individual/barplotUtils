@@ -7,15 +7,18 @@ for simple examples of what the implemented methods can do and how.
 
 Features:
 - broadcasting kwargs, all methods implement this, this allows a high degree of customisation for plots.
-- barplotUtils.stackbar, intuitive stack bar plots with little effort, can also rearange the stacks with zorder.
+- barplotUtils.stackbar, intuitive stack bar plots with little effort, can also rearange the stacks with stackOrder param.
 - barplotUtils.multibar, simple multiple bar plots.
 
+Fixed:
+- 'ghost bars' in barplotUtils.stackbar
+- allow zorder to be broadcast in barplotUtils.stackbar
+- removed dependance on pandas
+
 Known Issues:
-- the order of the elements in the legend for the barplotUtils.stackbar method are inverse to the order the elements were stacked
-- both barplotUtils.stackbar and barplotUtils.multibar overly depend on pandas dataframes
+- the order of the elements in the legend for the barplotUtils.stackbar method are in reverse of the order the elements were stacked
 - passing intuitive width parameters to the barplotUtils.multibar method is impossible
 - barplotUtils.multibar's iwidth meaning is unintuitive
-- requiring zorder to be passed as a kwarg may be too strict for barplotUtils.stackbar
 - using 'supportedListTypes' in deciding how to broadcast is an awkward workaround to reach the intended goal
-- args aren't broadcast (note: this is intentional but may be unintuitive)
 - multiple stack bar plots are unsupported
+- bottom compatibility could be improved for barplotUtil.stackbar
