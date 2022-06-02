@@ -11,14 +11,13 @@ Features:
 - barplotUtils.multibar, simple multiple bar plots.
 
 Fixed:
+- removed dependance on pandas
 - 'ghost bars' in barplotUtils.stackbar
 - allow zorder to be broadcast in barplotUtils.stackbar
-- removed dependance on pandas
+- improved bottom compatability in barplotUtils.stackbar
+- introduced igap and bgap for intuitive customisation of bar gaps in barplotUtils.multibar
 
 Known Issues:
 - the order of the elements in the legend for the barplotUtils.stackbar method are in reverse of the order the elements were stacked
-- passing intuitive width parameters to the barplotUtils.multibar method is impossible
-- barplotUtils.multibar's iwidth meaning is unintuitive
 - using 'supportedListTypes' in deciding how to broadcast is an awkward workaround to reach the intended goal
 - multiple stack bar plots are unsupported
-- bottom compatibility could be improved for barplotUtil.stackbar
